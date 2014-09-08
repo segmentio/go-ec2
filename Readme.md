@@ -11,6 +11,8 @@
 
 ## Example
 
+ Lookup running nodes matching "api-*":
+
 ```go
 auth, err := aws.EnvAuth()
 check(err)
@@ -24,6 +26,12 @@ check(err)
 for i, node := range nodes {
   fmt.Printf("  %d) %s %s\n", i, node.InstanceId, node.Name())
 }
+```
+
+ Lookup stopped nodes with the "Project" tag of "redshift":
+
+```go
+nodes, err := hosts.Find().State("stopped").Tag("Type", "redshift").Done()
 ```
 
 # License
