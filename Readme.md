@@ -1,9 +1,13 @@
 
-# go-hosts
+# go-ec2
 
- High-level EC2 instance querying library built on top of [mitchellh/goamz/ec2](https://github.com/mitchellh/goamz/tree/master/ec2).
+ High-level EC2 library built on top of [mitchellh/goamz/ec2](https://github.com/mitchellh/goamz/tree/master/ec2).
 
- View the [docs](http://godoc.org/github.com/segmentio/go-hosts).
+ View the [docs](http://godoc.org/github.com/segmentio/go-ec2).
+
+## Features
+
+ Currently just provides a fluent API for looking up instances.
 
 ## Example
 
