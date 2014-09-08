@@ -16,3 +16,8 @@ func (i *Instance) Tag(name string) string {
 	}
 	return ""
 }
+
+// Name returns the "Name" tag value.
+func (i *Instance) Name() string {
+	return i.Tag("Name")
+}

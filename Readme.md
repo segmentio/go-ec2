@@ -18,7 +18,7 @@ nodes, err := hosts.Name("api-*")
 check(err)
 
 for i, node := range nodes {
-  fmt.Printf("  %d) %s\n", i, node.InstanceId)
+  fmt.Printf("  %d) %s %s\n", i, node.InstanceId, node.Name())
 }
 ```
 
