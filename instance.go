@@ -7,6 +7,7 @@ type Instance struct {
 	ec2.Instance
 }
 
+// Tag returns the tag value of `name` or an empty string.
 func (i *Instance) Tag(name string) string {
 	for _, tag := range i.Tags {
 		if tag.Key == name {
