@@ -75,7 +75,7 @@ func (q *Query) Name(name ...string) *Query {
 }
 
 // Get kicks off the request and returns matching instance(s).
-func (q *Query) Get() ([]ec2.Instance, error) {
+func (q *Query) Get() ([]Instance, error) {
 	if res, err := q.client.ec2.Instances(q.ids, q.filter); err == nil {
 		return instances(res), nil
 	} else {

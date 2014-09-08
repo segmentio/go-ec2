@@ -21,6 +21,6 @@ func main() {
 	check(err)
 
 	for i, node := range nodes {
-		fmt.Printf("  %d) %v\n", i, node.Tags)
+		fmt.Printf("  %d) %s\n", i, node.Tag("Name"))
 	}
 }
