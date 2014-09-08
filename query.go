@@ -78,8 +78,19 @@ func (q *Query) Name(name ...string) *Query {
 // Done kicks off the request and returns matching instance(s).
 func (q *Query) Done() ([]Instance, error) {
 	if res, err := q.client.ec2.Instances(q.ids, q.filter); err == nil {
-		return instances(res), nil
+		return flatten(res), nil
 	} else {
 		return nil, err
 	}
+}
+
+// flat list of instances sans reservations.
+func flatten(res *ec2.InstancesResp) []Instance {
+	var instances []Instance
+	for _, reservation := range res.Reservations {
+		for _, instance := range reservation.Instances {
+			instances = append(instances, Instance{instance})
+		}
+	}
+	return instances
 }
