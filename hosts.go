@@ -1,9 +1,14 @@
+//
+// High-level EC2 instance querying library.
+//
 package hosts
 
 import "github.com/mitchellh/goamz/aws"
 import "github.com/mitchellh/goamz/ec2"
 
-// Client.
+// Client provides some higher level methods
+// for filtering, however if you need more
+// flexibility you should use .Query().
 type Client struct {
 	ec2 *ec2.EC2
 }

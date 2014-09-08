@@ -2,7 +2,8 @@ package hosts
 
 import "github.com/mitchellh/goamz/ec2"
 
-// Query.
+// Query provides a chainable API
+// for building up filters.
 type Query struct {
 	client *Client
 	ids    []string
