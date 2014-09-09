@@ -1,4 +1,12 @@
 
+v2.0.1 / 2014-09-09
+==================
+
+ * rename package
+ * add another example
+ * rename
+ * add History.md
+
 v2.0.0 / 2014-09-08
 ==================
 
