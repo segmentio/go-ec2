@@ -1,7 +1,7 @@
 //
 // High-level EC2 instance querying library.
 //
-package hosts
+package ec2
 
 import "github.com/mitchellh/goamz/aws"
 import "github.com/mitchellh/goamz/ec2"

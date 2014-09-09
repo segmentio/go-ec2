@@ -1,4 +1,4 @@
-package hosts
+package ec2
 
 import "github.com/mitchellh/goamz/ec2"
 
