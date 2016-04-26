@@ -7,6 +7,11 @@ type Instance struct {
 	ec2.Instance
 }
 
+// ID returns the instance ID.
+func (i *Instance) ID() string {
+	return i.InstanceId
+}
+
 // Tag returns the tag value of `name` or an empty string.
 func (i *Instance) Tag(name string) string {
 	for _, tag := range i.Tags {
